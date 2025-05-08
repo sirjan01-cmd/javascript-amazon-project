@@ -1,0 +1,30 @@
+# Node dependencies (if you ever use npm/yarn)
+node_modules/
+
+# Logs
+logs
+*.log
+
+# OS files
+.DS_Store       # macOS
+Thumbs.db       # Windows
+
+# dotenv environment files (in case you store keys or configs)
+.env
+.env.local
+.env.*.local
+
+# IDE/editor settings (optional but good practice)
+.vscode/
+.idea/
+
+# Build files (if you start using bundlers like Webpack/Vite later)
+dist/
+build/
+
+# Coverage reports (if you use testing tools like Jasmine or Jest)
+coverage/
+
+# Misc
+*.bak
+*.swp
