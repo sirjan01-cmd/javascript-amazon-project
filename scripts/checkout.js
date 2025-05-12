@@ -1,9 +1,19 @@
 import {renderOrderSummary} from './checkout/orderSummary.js';
 import {renderPaymentSummary} from './checkout/paymentSummary.js';
 import { loadProducts, loadProductsFetch} from '../data/products.js';
-import {loadCart} from '../data/cart.js';
+import {loadCart, cart} from '../data/cart.js';
 // import '../data/cart-class.js';
 // import '../data/back-end-practice.js';
+
+export function updateCheckoutQuantity() {
+  let totalItems = 0;
+  cart.forEach(() => {
+    totalItems += cartItem.quantity;
+  });
+
+  const checkoutLink = document.querySelector('.return-to-home-link');
+  checkoutLink.innerHTML = `${totalItems}`;
+}
 
 async function loadPage() {
   try{
